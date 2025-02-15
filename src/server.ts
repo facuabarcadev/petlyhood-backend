@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
+import { connectDB } from "./config/db";
 import userRoutes from "./routes/user.routes";
 
 // Cargar variables de entorno
@@ -13,6 +14,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
+
+connectDB();
 
 // Rutas
 app.use("/api/users", userRoutes);
