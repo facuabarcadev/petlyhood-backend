@@ -1,5 +1,6 @@
 node_modules
 dist
 .env
-.idea
+.idea/workspace.xml
+firebaseAdmin.json
 
